@@ -29,32 +29,31 @@ The log file contains experimental data that I wrote down during the experiment.
 
 1. The first thing I do is make a folder called "data_cleaning+tracking" - the name is not important, it's just the folder where we'll do the analysis. Then the files from the "HelperFiles", "HelperScripts", "ImageProcessingPipeline" and "ImageRegistration" are copied there. Now the folder looks like this:
 
-.
-├── 32bpX_32bpY_concentration
-│   ├── Date1
-│   │   ├── data_cleaning+tracking
-│   │   │   ├── copy_files.py
-│   │   │   ├── data_cleaning.py
-│   │   │   ├── delete_png_files.py
-│   │   │   ├── folder_creating.py
-│   │   │   ├── pore_idealization.py
-│   │   │   ├── pore_localization.py
-│   │   │   ├── pore_SM_signal_extraction.py
-│   │   │   ├── pore_track_linking.py
-│   │   │   ├── registration.py
-│   │   │   ├── run_data_cleaning.py
-│   │   │   ├── run_pore_idealization.py
-│   │   │   ├── run_pore_linking.py
-│   │   │   ├── run_pore_localization.py
-│   │   │   ├── run_pore_SM_signal_extraction.py
-│   │   │   ├── shutter_fallback.csv
-│   │   │   └── voltage_fallback.csv
-│   │   ├── blank_xxxEM.tif
-│   │   ├── droplet_1_001_-100mV.abf (electrical data in ABF format, from winEDR)
-│   │   ├── droplet_1_001_-100mV.tif (images from Andor)
-│   │   ├── droplet_1_001_-100mV.EDR (electrical data in native EDR, from winEDR)
-│   │   ├── log.txt
-│   │   ├── registry.tif
++ 32bpX_32bpY_concentration
+  + Date1
+    + data_cleaning+tracking
+      + copy_files.py
+      + data_cleaning.py
+      + delete_png_files.py
+      + folder_creating.py
+      + pore_idealization.py
+      + pore_localization.py
+      + pore_SM_signal_extraction.py
+      + pore_track_linking.py
+      + registration.py
+      + run_data_cleaning.py
+      + run_pore_idealization.py
+      + run_pore_linking.py
+      + run_pore_localization.py
+      + run_pore_SM_signal_extraction.py
+      + shutter_fallback.csv
+      + voltage_fallback.csv
+    + blank_xxxEM.tif
+    + droplet_1_001_-100mV.abf (electrical data in ABF format, from winEDR)
+    + droplet_1_001_-100mV.tif (images from Andor)
+    + droplet_1_001_-100mV.EDR (electrical data in native EDR, from winEDR)
+    + log.txt
+    + registry.tif
 
 2. Run folder_creation.py
 This script will ensure that there will be a separate folder for every ".tif" recording, with the folder name being equal to the recording name (you can amend this of course - if your names are too long, you might run into problems on window so try to be succinct and store the full name elsewhere, in the log, in a csv, ...)
@@ -62,6 +61,8 @@ This script will ensure that there will be a separate folder for every ".tif" re
 + 32bpX_32bpY_concentration
   + Date1
     + data_cleaning+tracking
+      + droplet_1_001_-100mV
+      + registry   
       + copy_files.py
       + data_cleaning.py
       + delete_png_files.py
